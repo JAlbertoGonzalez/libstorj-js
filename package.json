@@ -4,7 +4,7 @@
   "description": "X Cloud's Command Line Interface written in pure JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "mocha test/**/*.unit.js"
   },
   "keywords": [
     "internxt",
@@ -22,5 +22,9 @@
   "bin": {
     "storj": "bin/storj.js",
     "storj-register": "bin/storj-register.js"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
   }
 }
