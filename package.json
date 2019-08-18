@@ -4,7 +4,8 @@
   "description": "X Cloud's Command Line Interface written in pure JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/**/*.unit.js"
+    "test": "mocha test/**/*.unit.js",
+    "lint": "eslint bin/ lib/ test/"
   },
   "keywords": [
     "internxt",

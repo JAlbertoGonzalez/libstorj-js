@@ -1,4 +1,5 @@
 # libstorj-js
+[![Build Status](https://travis-ci.org/JAlbertoGonzalez/libstorj-js.svg?branch=master)](https://travis-ci.org/JAlbertoGonzalez/libstorj-js)
 
 Asynchronous multi-platform NodeJS library and CLI for encrypted file transfer on the Storj/INXT network.
 
