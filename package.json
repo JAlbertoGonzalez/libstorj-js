@@ -1,0 +1,26 @@
+{
+  "name": "inxt-cli-js",
+  "version": "1.0.0",
+  "description": "X Cloud's Command Line Interface written in pure JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "keywords": [
+    "internxt",
+    "cli"
+  ],
+  "author": "J. Alberto Gonzalez",
+  "license": "ISC",
+  "dependencies": {
+    "bip39": "^3.0.2",
+    "commander": "^3.0.0",
+    "dotenv": "^8.1.0",
+    "prompt": "^1.0.0",
+    "request": "^2.88.0"
+  },
+  "bin": {
+    "storj": "bin/storj.js",
+    "storj-register": "bin/storj-register.js"
+  }
+}
