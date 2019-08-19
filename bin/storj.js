@@ -20,6 +20,7 @@ function checkIfValidSubcommand() {
 storj
     .version(version)
     .command('register', 'setup a new storj bridge user')
+    .command('import-keys', 'import existing user')
     /*
     .help(() => {
         return `usage: storj [<options>] <command> [<args>]
