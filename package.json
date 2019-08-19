@@ -24,7 +24,8 @@
   "bin": {
     "storj": "bin/storj.js",
     "storj-register": "bin/storj-register.js",
-    "storj-import-keys": "bin/storj-import-keys.js"
+    "storj-import-keys": "bin/storj-import-keys.js",
+    "storj-export-keys": "bin/storj-export-keys.js"
   },
   "devDependencies": {
     "chai": "^4.2.0",
