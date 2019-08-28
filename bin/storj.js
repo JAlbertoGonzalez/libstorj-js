@@ -21,6 +21,7 @@ storj
     .version(version)
     .command('register', 'setup a new storj bridge user')
     .command('import-keys', 'import existing user')
+    .command('list-buckets', 'lists the available buckets')
     /*
     .help(() => {
         return `usage: storj [<options>] <command> [<args>]

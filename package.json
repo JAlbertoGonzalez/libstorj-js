@@ -18,18 +18,19 @@
     "bip39": "^3.0.2",
     "commander": "^3.0.0",
     "dotenv": "^8.1.0",
-    "inquirer": "^6.5.1",
+    "inquirer": "^6.5.2",
     "request": "^2.88.0"
   },
   "bin": {
     "storj": "bin/storj.js",
     "storj-register": "bin/storj-register.js",
     "storj-import-keys": "bin/storj-import-keys.js",
-    "storj-export-keys": "bin/storj-export-keys.js"
+    "storj-export-keys": "bin/storj-export-keys.js",
+    "storj-list-buckets": "bin/storj-list-buckets.js"
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "eslint": "^6.2.0",
+    "eslint": "^6.2.2",
     "mocha": "^6.2.0"
   }
 }
