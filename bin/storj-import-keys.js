@@ -6,14 +6,13 @@ const inquirer = require('inquirer');
 const questions = require('../lib/promptdata');
 const async = require('async');
 const bip39 = require('bip39');
-const createJson = require('../lib/crypto/importKeys').createJson;
+const saveToFile = require('../lib/crypto/importKeys').saveToFile;
+const configPath = require('../lib/config/configFile').CONFIG_FILE;
 
 async.waterfall([
     (next) => {
         inquirer.prompt(questions.USER)
-            .then(result => {
-                next(null, result);
-            })
+            .then(result => next(null, result))
             .catch(err => next(err));
     },
     (response, next) => {
@@ -25,9 +24,7 @@ async.waterfall([
         console.log('If you\'ve previously uploaded files, please enter your existing encryption key (12 to 24 words).\nOtherwise leave the field blank to generate a new key.');
         inquirer.prompt(questions.MNEMONIC).then(result => {
             next(null, { ...response, ...result });
-        }).catch(err => {
-            next(err);
-        });
+        }).catch(err => next(err));
     },
     (response, next) => {
         if (!response.mnemonic) {
@@ -71,12 +68,8 @@ async.waterfall([
     if (err) {
         console.log(err);
     }
-    const finalResult = createJson(result.user, result.pass, result.mnemonic, result.keypass);
+    saveToFile(result.user, result.pass, result.mnemonic, result.keypass);
 
-    console.log(finalResult);
-
-    // TODO save finalResult in a user config file located at $HOME/.storj/[bridge_hostname].json
-
-
+    console.log('\nSuccessfully stored bridge username, password, and encryption key to %s', configPath);
 });
 
