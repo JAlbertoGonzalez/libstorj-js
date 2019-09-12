@@ -7,5 +7,5 @@ describe('# buckets', () => {
         const mnemonic = 'abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about';
         const decryptedName = decryptBucketName(mnemonic, encryptedBucketName);
         expect(decryptedName).equals('dummy_bucket');
-    })
+    });
 });

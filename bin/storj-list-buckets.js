@@ -61,7 +61,7 @@ async.waterfall(
                     const data = JSON.parse(body);
                     data.forEach(bucket => {
                         const bucketName = decryptBucketName(credentials.mnemonic, bucket.name);
-                        console.log('ID: %s\tDecrypted: %s\tCreated: %s\tName: %s', bucket.id, false, bucket.created, bucketName);
+                        console.log('ID: %s\tDecrypted: %s \tCreated: %s\tName: %s', bucket.id, bucketName !== null, bucket.created, bucketName === null ? bucket.name : bucketName);
                     });
                 }
 
